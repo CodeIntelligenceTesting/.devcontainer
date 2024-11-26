@@ -5,13 +5,14 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"options": [
-			//"--progress=plain",
-			//"--no-cache",
 			"--secret=id=CIFUZZ_CREDENTIALS,env=CIFUZZ_CREDENTIALS"
 		]
 	},
 	"remoteEnv": {
-		"CIFUZZ_LLM_API_TOKEN": "${localEnv:CIFUZZ_LLM_API_TOKEN}"
+		"CIFUZZ_LLM_API_TOKEN": "${localEnv:CIFUZZ_LLM_API_TOKEN}",
+		"CIFUZZ_LLM_AZURE_DEPLOYMENT_NAME": "${localEnv:CIFUZZ_LLM_AZURE_DEPLOYMENT_NAME}",
+		"CIFUZZ_LLM_API_URL": "${localEnv:CIFUZZ_LLM_API_URL}",
+		"CIFUZZ_LLM_MAX_TOKENS": "${localEnv:CIFUZZ_LLM_MAX_TOKENS}"
 	},
 	"features": {
 		"ghcr.io/devcontainers-community/features/llvm:3": {}
