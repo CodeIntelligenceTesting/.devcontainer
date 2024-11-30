@@ -1,6 +1,6 @@
 # Dev-Container
 
-Dev-Container example for CI Fuzz. Build on Ubuntu 22.04.
+Dev-Container example for CI Fuzz. Built on Ubuntu 24.04.
 
 ## Requirements
 - docker
