@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04
+FROM mcr.microsoft.com/devcontainers/cpp:1-ubuntu-24.04
 
 #ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="3.22.2"
 
@@ -15,7 +15,7 @@ FROM mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04
 
 # [Optional] Uncomment this section to install additional packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends cmake clang llvm lcov
+    && apt-get -y install --no-install-recommends cmake clang llvm lcov libclang-rt-dev
 RUN --mount=type=secret,id=CIFUZZ_CREDENTIALS,required sh -c "$(curl -fsSL http://downloads.code-intelligence.com/assets/install-cifuzz.sh)" $(cat /run/secrets/CIFUZZ_CREDENTIALS) latest
 
 # # Set random bits to less then 32 to avoid a LLVM bug that will cause segmentation faults during fuzzing execution.
