@@ -27,7 +27,8 @@
 				"jeff-hykin.better-cpp-syntax"
 			]
 		}
-	}
+	},
+	"runArgs": ["--platform=linux/amd64" ]
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
