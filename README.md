@@ -14,33 +14,28 @@ Always start the dev-container from the root of the project you use this for and
 
 
 ## Submodule Infos
-If you have added this project as submodule you could set ```git config submodule.recurse true``` to automatically update the devcontainer setup on pull requests as well. This is an option every user has to set.
+If you have added this project as submodule you could set ```git config submodule.recurse true``` to automatically update the devcontainer setup on pull requests as well. This is an option every user has to set. 
 
-## Additional Information
-
-### ARM Architectures
-The Dockerfile currently enforces amd64 architecture, meaning that running this docker container on an ARM64 CPU will trigger emulation and therefor have reduced performance in comparison to amd64 powered systems. 
-
-### Docker / Podman Installation Information
+## Docker / Podman Installation Information
 
 Podman and Docker are two different possibilities to run the dev-containers. They both support the same standard Container Runtime Interface for Open Container Initiative Images and Runtimes (CRI-O).
 
 Docker is proprietary software from the Docker Inc. that may require you to have a license. Podman is an open source tool backed up by Redhat that tackled the architecture security flaws of Docker.
 
-#### Podman Installation
+### Podman Installation
 Podman can be installed on Windows, MacOS and Linux based distributions. The instructions are linked [here](https://podman.io/docs/installation).
 
 To use VS Code with Podman you also need to link docker calls to podman. An example for all operating systems can be found [here](https://hackernoon.com/empowering-your-devcontainer-with-podman-in-vs-code).
 
-#### Docker
+### Docker
 Docker exists of two programs, the Docker Desktop, a gui programm that is available for Windows, MacOS and major Linux based OS and Docker Engine, the underlying heavy lifting program. Docker Engine is always already included in the Docker Desktop programm. It is only possible to install Docker Engine directly on a Linux based OS.
 
-##### Docker Desktop
+#### Docker Desktop
 Information about Docker Desktop and installation instructions can be found [here](https://docs.docker.com/desktop/).
 
-##### Docker Engine
+#### Docker Engine
 The Docker Engine installation instruction for Linux based OS can be found [here](https://docs.docker.com/desktop/).
 As of 10th of January 2025 it is released under the Apache License, Version 2.0.
 
-##### Windows
+#### Windows
 If you are using Docker on Windows, please make sure Docker Desktop container mode is switched to Linux.
