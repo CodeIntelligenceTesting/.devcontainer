@@ -14,7 +14,11 @@ Always start the dev-container from the root of the project you use this for and
 
 
 ## Submodule Infos
-If you have added this project as submodule you could set ```git config submodule.recurse true``` to automatically update the devcontainer setup on pull requests as well. This is an option every user has to set. 
+If you have added this project as submodule you could set ```git config submodule.recurse true``` to automatically update the devcontainer setup on pull requests as well. This is an option every user has to set.
+
+## Known Problems
+- Packet inspection security solutions can cause the build to fail.
+  - Copy the root certificate of the inspection authority (in .crt format) in the .devcontainer folder, uncomment line [7](Dockerfile#L7)-[9](Dockerfile#L9) & adjust the cert-name in line [8](Dockerfile#L8).
 
 ## Docker / Podman Installation Information
 
