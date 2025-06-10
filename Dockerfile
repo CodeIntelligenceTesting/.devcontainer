@@ -16,7 +16,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     clang \
     llvm \
     lcov \
-    libclang-rt-dev
+    libclang-rt-dev \ 
+    ninja-build
 
 # Installing cifuzz and adding autocompletion
 RUN --mount=type=secret,id=CIFUZZ_CREDENTIALS,required sh -c "$(curl -fsSL http://downloads.code-intelligence.com/assets/install-cifuzz.sh)" $(cat /run/secrets/CIFUZZ_CREDENTIALS) latest  
