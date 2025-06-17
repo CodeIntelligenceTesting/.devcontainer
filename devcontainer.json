@@ -9,11 +9,26 @@
 		]
 	},
 	"remoteEnv": {
+		// General LLM connection environment variables
+		"CIFUZZ_LLM_API_TYPE": "${localEnv:CIFUZZ_LLM_API_TYPE}",
+		"CIFUZZ_LLM_MODEL": "${localEnv:CIFUZZ_LLM_MODEL}",
+
+		// OpenAI API specification environment variables
+		"CIFUZZ_LLM_API_URL": "${localEnv:CIFUZZ_LLM_API_URL}",
 		"CIFUZZ_LLM_API_TOKEN": "${localEnv:CIFUZZ_LLM_API_TOKEN}",
 		"CIFUZZ_LLM_AZURE_DEPLOYMENT_NAME": "${localEnv:CIFUZZ_LLM_AZURE_DEPLOYMENT_NAME}",
-		"CIFUZZ_LLM_API_URL": "${localEnv:CIFUZZ_LLM_API_URL}",
+		
+		// AWS Bedrock API specification environment variables
+		"CIFUZZ_LLM_BEDROCK_MODEL_VERSION": "${localEnv:CIFUZZ_LLM_BEDROCK_MODEL_VERSION}",
+		"AWS_ACCESS_KEY_ID": "${localEnv:AWS_ACCESS_KEY_ID}",
+		"AWS_SECRET_ACCESS_KEY": "${localEnv:AWS_SECRET_ACCESS_KEY}",
+		
+		// Additional environment variables
+		// leave empty if not needed.
+		"CIFUZZ_LLM_TEMPERATURE": "${localEnv:CIFUZZ_LLM_TEMPERATURE}",
 		"CIFUZZ_LLM_MAX_TOKENS": "${localEnv:CIFUZZ_LLM_MAX_TOKENS}",
-		"CIFUZZ_LLM_MODEL": "${localEnv:CIFUZZ_LLM_MODEL}"
+		"CIFUZZ_LLM_API_HEADER_some_header": "${localEnv:CIFUZZ_LLM_API_HEADER_some_header}",
+		"CIFUZZ_LLM_MAX_ALTERNATIVES": "${localEnv:CIFUZZ_LLM_MAX_ALTERNATIVES}"
 	},
 	"features": {
 		"ghcr.io/devcontainers-community/features/llvm:3": {}
